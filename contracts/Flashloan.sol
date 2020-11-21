@@ -25,7 +25,7 @@ contract Flashloan is FlashLoanReceiverBase {
     {
         require(_amount <= getBalanceInternal(address(this), _reserve), "Invalid balance, was the flashLoan successful?");
 
-        emit Loan(msg.sender, _reserve, _amount, _fee);
+        emit Loan(tx.origin, _reserve, _amount, _fee);
 
         uint totalDebt = _amount.add(_fee);
         transferFundsBackToPoolInternal(_reserve, totalDebt);

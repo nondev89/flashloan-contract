@@ -1,14 +1,8 @@
 {
-  "name": "flashloan-box",
-  "description": "A truffle box containing all you need to get started with developing flash loans",
+  "name": "basic-flashloan-contract",
+  "description": "A simple flashloan contract",
   "version": "1.0.0",
-  "license": "AGPLv3",
-  "author": "Aave",
-  "contributors": [
-    "David Truong <david@aave.com>"
-  ],
-  "homepage": "https://docs.aave.com/developers/tutorials/performing-a-flash-loan/...-with-truffle",
-  "repository": "https://github.com/aave/flashloan-box",
+  "author": "Sergey",
   "dependencies": {
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
