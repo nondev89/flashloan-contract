@@ -20,7 +20,10 @@ module.exports = async function (deployer, network) {
                 throw Error(`Are you deploying to the correct network? (network selected: ${network})`)
         }
 
+        process.env.NETWORK = network;
+
         await deployer.deploy(Flashloan, lendingPoolAddressesProviderAddress)
+        
     } catch (e) {
         console.log(`Error in migration: ${e.message}`)
     }

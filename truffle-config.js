@@ -14,21 +14,21 @@ module.exports = {
 	    skipDryRun: true
 	  },
 	  ropsten: {
-	    provider: new HDWalletProvider(process.env.DEPLOYMENT_ACCOUNT_KEY, "https://ropsten.infura.io/v3/" + process.env.INFURA_API_KEY),
+	    provider: () => new HDWalletProvider(process.env.DEPLOYMENT_ACCOUNT_KEY, "https://ropsten.infura.io/v3/" + process.env.INFURA_PROJECT_ID),
 	    network_id: 3,
 	    gas: 5000000,
 		gasPrice: 100000000000, // 100 Gwei
-		skipDryRun: true
+		//skipDryRun: true
 	  },
 	  kovan: {
-	    provider: new HDWalletProvider(process.env.DEPLOYMENT_ACCOUNT_KEY, "https://kovan.infura.io/v3/" + process.env.INFURA_API_KEY),
+	    provider: () => new HDWalletProvider(process.env.DEPLOYMENT_ACCOUNT_KEY, "https://kovan.infura.io/v3/" + process.env.INFURA_PROJECT_ID),
 	    network_id: 42,
 	    gas: 5000000,
 		gasPrice: 10000000000, // 10 Gwei
 		skipDryRun: true
 	  },
 	  mainnet: {
-	    provider: new HDWalletProvider(process.env.DEPLOYMENT_ACCOUNT_KEY, "https://mainnet.infura.io/v3/" + process.env.INFURA_API_KEY),
+	    provider: () => new HDWalletProvider(process.env.DEPLOYMENT_ACCOUNT_KEY, "https://mainnet.infura.io/v3/" + process.env.INFURA_PROJECT_ID),
 	    network_id: 1,
 	    gas: 5000000,
 	    gasPrice: 10000000000 // 10 Gwei
