@@ -16,7 +16,6 @@ require('chai')
         let contract
     
         before(async() => {
-            console.log("TEST")
             contract = await Flashloan.deployed()
         })
     

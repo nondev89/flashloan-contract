@@ -34,7 +34,7 @@ contract Flashloan is FlashLoanReceiverBase {
     /**
         Flash loan 1000000000000000000 wei (1 ether) worth of `_asset`
      */
-    function flashloan(address _asset) public onlyOwner {
+    function flashloan(address _asset) public {
         bytes memory data = "";
         uint amount = 1 ether;
 
